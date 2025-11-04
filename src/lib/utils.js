@@ -30,7 +30,7 @@ export const getInitials = (name) => {
 // Format Date 
 export const formatDate = (dateString) => {
   if (!dateString) return 'N/A';
-  return format(new Date(dateString), 'MMMM d, yyyy');
+  return format(new Date(dateString), 'dd-MM-yyyy | hh:mm a'); 
 };
 
 // Get Image URL
