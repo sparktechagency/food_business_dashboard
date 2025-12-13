@@ -96,7 +96,7 @@ const Dashboard = () => {
                     <div className="flex justify-between items-center mb-4">
                         <h3 className="text-lg font-medium">{t('pending_request')}</h3>
                         <Link
-                            to="/company-management"
+                            to="/order-management"
                             className="text-primary hover:underline text-sm font-medium"
                         >
                             <Button variant="ghost">{t('view_all')} <MoveRight /></Button>
