@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { setAccessToken, setAdmin } from './auth/authSlice'
 
-export const IMAGE_BASE_URL = 'http://172.252.13.86:5003';
+export const IMAGE_BASE_URL = 'https://backend.grupoanfguakamol.com';
 // export const IMAGE_BASE_URL = 'https://backend.grupoanfguakamol.com';
 
 const rawBaseQuery = fetchBaseQuery({
-    baseUrl: 'http://172.252.13.86:5003',
+    baseUrl: 'https://backend.grupoanfguakamol.com',
     // baseUrl: 'https://backend.grupoanfguakamol.com',
 
     prepareHeaders: (headers, { getState }) => {
