@@ -33,7 +33,7 @@ const OrderTable = ({ data, page, limit, onStatusChange, onView }) => {
           <TableRow>
             <TableHead>{t('sn')}</TableHead>
             <TableHead>{t('customer')}</TableHead>
-            <TableHead>{t('dish_name')}</TableHead>
+            <TableHead>{t('dish_name')}</TableHead> 
             <TableHead>{t('price')}</TableHead>
             <TableHead>{t('order_date')}</TableHead>
             <TableHead>{t('payment')}</TableHead>
@@ -56,7 +56,7 @@ const OrderTable = ({ data, page, limit, onStatusChange, onView }) => {
               </TableCell>
               <TableCell className="whitespace-nowrap">{order.menus_id?.dishName || 'N/A'}</TableCell>
               <TableCell>${order.menus_id?.price?.toFixed(2) || '0.00'}</TableCell>
-              <TableCell className="whitespace-nowrap">{formatDate(order.date)}</TableCell>
+              <TableCell className="whitespace-nowrap">{formatDate(order.createdAt)}</TableCell>
               <TableCell>
                 <Badge variant={getPaymentStatusVariant(order.paymentStatus)}>
                   {order.paymentStatus || 'N/A'}

@@ -42,11 +42,13 @@ const WeeklyMenu = () => {
         currentPage,
         setCurrentPage,
         items: menus,
-        totalPages,
+        meta,
         page,
         isLoading,
         isError
     } = usePaginatedSearchQuery(useGetAllMenuQuery, { resultsKey: "menus" }, filters);
+    const {total, limit} = meta || {};
+    const totalPages = Math.ceil(total / limit);
 
     const [addOpen, setAddOpen] = useState(false);
     const [editOpen, setEditOpen] = useState(false);

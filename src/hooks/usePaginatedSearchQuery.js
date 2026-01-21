@@ -25,6 +25,7 @@ export default function usePaginatedSearchQuery(queryHook, { limit = 10, results
   const rawResults = data?.data?.[resultsKey];
   const items = Array.isArray(rawResults) ? rawResults : [];
   const totalPages = data?.data?.pagination?.totalPage || 1;
+  const meta = data?.data?.pagination || {};
   const page = data?.data?.pagination?.page || 1;
 
   return {
@@ -34,6 +35,7 @@ export default function usePaginatedSearchQuery(queryHook, { limit = 10, results
     setCurrentPage,
     totalPages,
     page,
+    meta,
     items,
     isLoading,
     isError,
